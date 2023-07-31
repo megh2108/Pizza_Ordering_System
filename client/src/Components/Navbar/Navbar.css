@@ -61,7 +61,7 @@
   /*--------------------------------------------------------------
   # Desktop Navigation
   --------------------------------------------------------------*/
-  @media (min-width: 1280px) {
+  @media (min-width: 900px) {
     .navbar {
       padding: 0;
     }
@@ -189,7 +189,7 @@
     }
   }
   
-  @media (min-width: 1280px) and (max-width: 1366px) {
+  @media (min-width: 900px) and (max-width: 1366px) {
     .navbar .dropdown .dropdown ul {
       left: -90%;
     }
@@ -199,7 +199,7 @@
     }
   }
   
-  @media (min-width: 1280px) {
+  @media (min-width: 900px) {
   
     .mobile-nav-show,
     .mobile-nav-hide {
@@ -210,7 +210,7 @@
   /*--------------------------------------------------------------
   # Mobile Navigation
   --------------------------------------------------------------*/
-  @media (max-width: 1279px) {
+  @media (max-width: 899px) {
     .navbar {
       position: fixed;
       top: 0;
