@@ -15,8 +15,9 @@ function Footer(){
           <div>
             <h4>Address</h4>
             <p>
-              A108 Adam Street <br />
-              New York, NY 535022 - US<br />
+            Maniya ni Khad, <br/>behind Gopi Cinema Road, <br />
+            near Balmandir, Vivekanand Wadi,<br />
+            Anand, Gujarat 388001
             </p>
           </div>
 
@@ -27,8 +28,8 @@ function Footer(){
           <div>
             <h4>Reservations</h4>
             <p>
-              <strong>Phone:</strong> +1 5589 55488 55<br />
-              <strong>Email:</strong> info@example.com<br />
+              <strong>Phone:</strong> +91 6352764092<br />
+              <strong>Email:</strong> meghshah0410@gmail.com<br />
             </p>
           </div>
         </div>
@@ -38,8 +39,8 @@ function Footer(){
           <div>
             <h4>Opening Hours</h4>
             <p>
-              <strong>Mon-Sat: 11AM</strong> - 23PM<br />
-              Sunday: Closed
+              <strong>Mon-Sat </strong><br /> 11:00 AM - 11:00 PM
+              {/* Sunday: Closed */}
             </p>
           </div>
         </div>
@@ -59,14 +60,14 @@ function Footer(){
 
     <div className="container">
       <div className="copyright">
-        &copy; Copyright <strong><span>Yummy</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Chessy Pizza</span></strong>. All Rights Reserved <br />
       </div>
       <div className="credits">
         {/* <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/NavLinkJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ --> */}
-        Designed by <NavLink to="https://bootstrapmade.com/">BootstrapMade</NavLink>
+        Designed by <NavLink to="https://bootstrapmade.com/">Pooja Sorathiya - 21CP324 </NavLink>| <NavLink to="https://bootstrapmade.com/">Megh Shah - 20CP041</NavLink>  | <NavLink to="https://bootstrapmade.com/">Rahul Katara - 21CP316</NavLink>
       </div>
     </div>
 
