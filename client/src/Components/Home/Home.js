@@ -13,8 +13,8 @@ function Home(){
           <h2 data-aos="fade-up">Enjoy Your Healthy<br/>Delicious Food</h2>
           <p data-aos="fade-up" data-aos-delay="100">Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
           <div className="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <NavLink href="#book-a-table" className="btn-book-a-table">Book a Table</NavLink>
-            <NavLink href="https://www.youtube.com/watch?v=LXb3EKWsInQ" className="glightbox btn-watch-video d-flex align-items-center"><i className="bi bi-play-circle"></i><span>Watch Video</span></NavLink>
+            <NavLink to="/Menu" className="btn-book-a-table">Menu</NavLink>
+            {/* <NavLink to="https://www.youtube.com/watch?v=LXb3EKWsInQ" className="glightbox btn-watch-video d-flex align-items-center"><i className="bi bi-play-circle"></i><span>Watch Video</span></NavLink> */}
           </div>
         </div>
         <div className="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
