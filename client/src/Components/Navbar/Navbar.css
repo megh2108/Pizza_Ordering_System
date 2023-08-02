@@ -24,14 +24,41 @@
     max-height: 40px;
     margin-right: 6px;
   }
-  
-  .header .logo h1 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #000;
-    margin: 100px;
-    font-family: var(--font-secondary);
+
+  /* @media (min-width: 900px) and (max-width: 1279px){
+    .header .logo h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000;
+      margin: 100px;
+      font-family: var(--font-secondary);
+    }
+  } */
+
+  @media (min-width: 900px){
+
+    .header .logo h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000;
+      margin: 100px;
+      font-family: var(--font-secondary);
+    }
+
   }
+  @media (max-width: 1279px){
+
+    .header .logo h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000;
+      margin: 250px;
+      font-family: var(--font-secondary);
+    }
+
+  }
+  
+  
   
   .header .logo h1 span {
     color: var(--color-primary);
