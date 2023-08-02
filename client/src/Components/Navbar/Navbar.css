@@ -46,7 +46,7 @@
     }
 
   }
-  @media (max-width: 1279px){
+  @media  (min-width: 1279px) and (max-width: 1800px) {
 
     .header .logo h1 {
       font-size: 28px;
