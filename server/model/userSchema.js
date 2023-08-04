@@ -23,7 +23,16 @@ const userSchema = new mongoose.Schema({
     cpassword:{
         type: String,
         require:true
-    }
+    },
+    tokens:[
+        {
+            token: {
+                
+              type: String,
+              required: true
+            }
+        }
+    ]
 
 })
 
