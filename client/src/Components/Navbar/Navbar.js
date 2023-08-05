@@ -15,8 +15,8 @@ function Navbar() {
                             <li><NavLink to="/About">About</NavLink></li>
                             <li><NavLink to="/Menu">Menu</NavLink></li>
                             <li><NavLink to="/Contact">Contact</NavLink></li>
-                            {/* <li><NavLink to="/Register">Register</NavLink></li>
-                            <li><NavLink to="/Login">Login</NavLink></li> */}
+                            {/* <li><NavLink to="/Register">Register</NavLink></li> */}
+                            {/* <li><NavLink to="/Login">Login</NavLink></li> */}
 
                         </ul>
 

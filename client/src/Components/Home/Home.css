@@ -5,8 +5,8 @@
     width: 100%;
     background-size: cover;
     position: relative;
-    min-height: 60vh;
-    padding: 160px 0 60px 0;
+    min-height: 100vh;
+    padding: 100px 0 60px 0;
   }
   
   .hero h2 {
@@ -36,12 +36,12 @@
     border-radius: 50px;
     transition: 0.5s;
     color: #fff;
-    background: var(--color-primary);
+    background: rgb(214, 42, 62);
     box-shadow: 0 8px 28px rgba(206, 18, 18, 0.2);
   }
   
   .hero .btn-book-a-table:hover {
-    background: rgba(206, 18, 18, 0.8);
+    background:red;
     box-shadow: 0 8px 28px rgba(206, 18, 18, 0.45);
   }
   
