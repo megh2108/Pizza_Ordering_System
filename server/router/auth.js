@@ -20,10 +20,10 @@ router.post('/signin', async (req, res) => {
     // console.log(req.body.name);
     // console.log(req.body.email);
 
-    const { name, email, phoneno, password, cpassword } = req.body;
+    const { name, email, phone, password, cpassword } = req.body;
 
     //  for validation purpose - if empty feild then error throw
-    if (!name || !email || !phoneno || !password || !cpassword) {
+    if (!name || !email || !phone || !password || !cpassword) {
         return res.status(422).json({ error: "please filled properly feild ." });
 
     }
@@ -39,7 +39,7 @@ router.post('/signin', async (req, res) => {
         } else {
 
 
-            const user = new User({ name, email, phoneno, password, cpassword });
+            const user = new User({ name, email, phone, password, cpassword });
 
             //if user is new then we save attribute , but before save we have to encrypt password feild using bcrypt.js
             // presave method

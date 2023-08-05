@@ -36,6 +36,10 @@ input {
     -ms-border-radius: 36px;
 }
 
+.w3l-hotair-form{
+    overflow-y: scroll;
+    margin-bottom: 100px;
+}
 
 
 .w3l_form {
