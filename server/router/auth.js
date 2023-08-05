@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs');
 
 require('../db/conn');
 const User = require('../model/userSchema');
+const Pizza = require('../model/pizzaSchema');
 
 router.get('/',(req,res) =>{
     res.send(`Hello world from server`);
@@ -114,6 +115,19 @@ router.post('/login', async (req, res) => {
     }
 })
 
+
+router.get('/pizza',async (req, res) => {
+    // Use the Pizza model to find all documents in the collection
+    try {
+        // Use the Pizza model to find all documents in the collection
+        const pizzas = await Pizza.find({});
+        // Return the data as JSON
+        res.json(pizzas);
+      } catch (err) {
+        console.error('Error fetching data:', err);
+        res.status(500).json({ error: 'Internal server error' });
+      }
+  })
 
 
 module.exports = router;
