@@ -38,8 +38,9 @@ function Signup() {
         });
 
         const res = await response.json();
+        console.log(response.status);
 
-        if (res.status === 422 || !response) {
+        if (response.status === 422 || !res) {
             window.alert("Invalid registration");
             console.log("Invalid registration");
         } else {

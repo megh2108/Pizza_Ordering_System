@@ -22,8 +22,11 @@ router.post('/signin', async (req, res) => {
 
     const { name, email, phone, password, cpassword } = req.body;
 
+    console.log(req.body);
+
     //  for validation purpose - if empty feild then error throw
     if (!name || !email || !phone || !password || !cpassword) {
+
         return res.status(422).json({ error: "please filled properly feild ." });
 
     }
