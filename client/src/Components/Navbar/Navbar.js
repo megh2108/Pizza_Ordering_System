@@ -2,140 +2,139 @@ import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 
-
 const select = (el, all = false) => {
     el = el.trim();
-
+  
     if (el.startsWith('/')) {
-        el = el.substring(1);
+      el = el.substring(1);
     }
-
+  
     if (all) {
-        return [...document.querySelectorAll(el)];
+      return [...document.querySelectorAll(el)];
     } else {
-        return document.querySelector(el);
+      return document.querySelector(el);
     }
-};
-
-const select1 = (el, all = false) => {
+  };
+  
+  const select1 = (el, all = false) => {
     el = el.trim();
     if (all) {
-        return [...document.querySelectorAll(el)];
+      return [...document.querySelectorAll(el)];
     } else {
-        return document.querySelector(el);
+      return document.querySelector(el);
     }
-};
-
-const scrollto = (hash) => {
+  };
+  
+  const scrollto = (hash) => {
     let header = select('#header');
     let offset = header.offsetHeight;
-
+  
     let cleanedHash = hash.replace('/', ''); // Remove the leading forward slash
     let element = select(cleanedHash);
-
+  
     if (element) {
-        let elementPos = element.offsetTop;
-        window.scrollTo({
-            top: elementPos - offset,
-            behavior: 'smooth',
-        });
+      let elementPos = element.offsetTop;
+      window.scrollTo({
+        top: elementPos - offset,
+        behavior: 'smooth',
+      });
     }
-};
-
-function Navbar() {
-
+  };
+  
+function Navbar()  {
+  
     useEffect(() => {
-
-
-        // moble navbar active
-        const handleClick = (e) => {
-            const clickedElement = e.target;
-            const navbar = select('#navbar');
-
-            if (clickedElement.matches('.mobile-nav-toggle')) {
-                navbar.classList.toggle('navbar-mobile');
-                clickedElement.classList.toggle('bi-list');
-                clickedElement.classList.toggle('bi-x');
+  
+  
+      // moble navbar active
+      const handleClick = (e) => {
+        const clickedElement = e.target;
+        const navbar = select('#navbar');
+  
+        if (clickedElement.matches('.mobile-nav-toggle')) {
+          navbar.classList.toggle('navbar-mobile');
+          clickedElement.classList.toggle('bi-list');
+          clickedElement.classList.toggle('bi-x');
+        }
+  
+        if (clickedElement.matches('.navbar a')) {
+          navbar.classList.remove('navbar-mobile');
+          let navbarToggle = select('.mobile-nav-toggle');
+          navbarToggle.classList.toggle('bi-list');
+          navbarToggle.classList.toggle('bi-x');
+        }
+  
+        if (clickedElement.matches('.navbar .dropdown > .abc')) {
+          const navbar = select('#navbar');
+  
+          if (navbar.classList.contains('navbar-mobile')) {
+            e.preventDefault();
+            clickedElement.nextElementSibling.classList.toggle('dropdown-active');
+          }
+        }
+  
+        if (clickedElement.matches('.scrollto')) {
+          const targetHash = clickedElement.getAttribute('to');
+  
+          if (targetHash && select(targetHash)) {
+            e.preventDefault();
+  
+            let navbar = select('#navbar');
+  
+            if (navbar.classList.contains('navbar-mobile')) {
+              navbar.classList.remove('navbar-mobile');
+              let navbarToggle = select('.mobile-nav-toggle');
+              navbarToggle.classList.toggle('bi-list');
+              navbarToggle.classList.toggle('bi-x');
             }
-
-            if (clickedElement.matches('.navbar a')) {
-                navbar.classList.remove('navbar-mobile');
-                let navbarToggle = select('.mobile-nav-toggle');
-                navbarToggle.classList.toggle('bi-list');
-                navbarToggle.classList.toggle('bi-x');
-            }
-
-            if (clickedElement.matches('.navbar .dropdown > .abc')) {
-                const navbar = select('#navbar');
-
-                if (navbar.classList.contains('navbar-mobile')) {
-                    e.preventDefault();
-                    clickedElement.nextElementSibling.classList.toggle('dropdown-active');
-                }
-            }
-
-            if (clickedElement.matches('.scrollto')) {
-                const targetHash = clickedElement.getAttribute('to');
-
-                if (targetHash && select(targetHash)) {
-                    e.preventDefault();
-
-                    let navbar = select('#navbar');
-
-                    if (navbar.classList.contains('navbar-mobile')) {
-                        navbar.classList.remove('navbar-mobile');
-                        let navbarToggle = select('.mobile-nav-toggle');
-                        navbarToggle.classList.toggle('bi-list');
-                        navbarToggle.classList.toggle('bi-x');
-                    }
-
-                    scrollto(targetHash);
-                }
-            }
-        };
-
-        document.addEventListener('click', handleClick, true);
-
-        return () => {
-            document.removeEventListener('click', handleClick, true);
-        };
-
-
-
+  
+            scrollto(targetHash);
+          }
+        }
+      };
+  
+      document.addEventListener('click', handleClick, true);
+  
+      return () => {
+        document.removeEventListener('click', handleClick, true);
+      };
+  
+  
+  
     }, []);
-
+  
     useEffect(() => {
-        // sticked navbar
-
-        const selectHeader = select1('#header');
-        const nextElement = selectHeader?.nextElementSibling;
-        let headerOffset = selectHeader?.offsetTop || 0;
-
-        const handleHeaderFixed = () => {
-            if ((headerOffset - window.scrollY) <= 0) {
-                selectHeader?.classList.add('fixed-top');
-                nextElement?.classList.add('scrolled-offset');
-            } else {
-                selectHeader?.classList.remove('fixed-top');
-                nextElement?.classList.remove('scrolled-offset');
-            }
-        };
-
-        handleHeaderFixed(); // Call it initially to set the initial state
-        window.addEventListener('load', handleHeaderFixed);
-        document.addEventListener('scroll', handleHeaderFixed);
-
-        return () => {
-            window.removeEventListener('load', handleHeaderFixed);
-            document.removeEventListener('scroll', handleHeaderFixed);
-        };
-    }, [])
+      // sticked navbar
+  
+      const selectHeader = select1('#header');
+      const nextElement = selectHeader?.nextElementSibling;
+      let headerOffset = selectHeader?.offsetTop || 0;
+  
+      const handleHeaderFixed = () => {
+        if ((headerOffset - window.scrollY) <= 0) {
+          selectHeader?.classList.add('fixed-top');
+          nextElement?.classList.add('scrolled-offset');
+        } else {
+          selectHeader?.classList.remove('fixed-top');
+          nextElement?.classList.remove('scrolled-offset');
+        }
+      };
+  
+      handleHeaderFixed(); // Call it initially to set the initial state
+      window.addEventListener('load', handleHeaderFixed);
+      document.addEventListener('scroll', handleHeaderFixed);
+  
+      return () => {
+        window.removeEventListener('load', handleHeaderFixed);
+        document.removeEventListener('scroll', handleHeaderFixed);
+      };
+    },[])
 
     return (
         <>
 
 
-            <header id="header" className="header fixed-top d-flex align-items-center">
+            <header id="header" className="header d-flex align-items-center">
                 <div className="container d-flex align-items-center ">
                     <NavLink to="/" className="logo d-flex align-items-center me-auto me-lg-0">
                         <img src="assets/img/logo/image_1.png" />
