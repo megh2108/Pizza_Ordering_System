@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const Authenticate = require("../middleware/Authenticate");
 
 
 require('../db/conn');
@@ -132,5 +133,10 @@ router.get('/pizza',async (req, res) => {
       }
   })
 
+
+  router.get('/about', Authenticate, (req, res) => {
+    console.log(`Hello my About`);
+    res.send(req.rootUser);
+  });
 
 module.exports = router;

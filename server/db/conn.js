@@ -9,4 +9,4 @@ mongoose.connect(DB,{
     // useFindAndModify: false
 }).then(() => {
     console.log(`Connection Succesfull`);
-}).catch((err) => { console.log(`No Cnnection.`)});
+}).catch((err) => { console.log(`No Connection.`)});
