@@ -4,7 +4,6 @@ import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
 import Menu from "./Components/Menu/Menu";
-import Menu1 from "./Components/Menu1/Menu1";
 import About from "./Components/About/About";
 import Cart from "./Components/Cart/Cart";
 import ScrollToTop from './Components/Scroll/ScrollToTop'
@@ -22,7 +21,7 @@ function App() {
       <Route path="/Login" element={<Login />} />
       <Route path="/Signup" element={<Signup />} />
       {/* <Route path="/Menu" element={<Menu />} /> */}
-      <Route path="/Menu" element={<Menu1 />} />
+      <Route path="/Menu" element={<Menu />} />
       <Route path="/About" element={<About />} />
       <Route path="/Cart" element={<Cart />} />
       <Route path="/" element={<Home />} />
