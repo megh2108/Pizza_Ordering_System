@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
+import Menu from "./Components/Menu/Menu";
 import {BrowserRouter,Routes, Route} from "react-router-dom";
 import './App.css';
 
@@ -16,6 +17,8 @@ function App() {
       <Route path="/Login" element={<Login />} />
       <Route path="/Signup" element={<Signup />} />
       <Route path="/" element={<Home />} />
+      <Route path="/Menu" element={<Menu />} />
+
     </Routes>
     <Footer />
     </BrowserRouter>
