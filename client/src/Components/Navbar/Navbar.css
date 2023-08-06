@@ -6,12 +6,12 @@
     background: #fff;
     transition: all 0.5s;
     z-index: 997;
-    height: 100spx;
+    height: 100px;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   }
   
   #header.fixed-top {
-    height: 70px;
+    height: 90px;
   }
 
   #header .wills{
@@ -21,25 +21,38 @@
 
   
   #header .logo {
-    font-size: 30px;
-    margin-left: 30px;
+    /* font-size: 30px; */
+    /* margin-left: 30px; */
     padding: 0;
     line-height: 1;
     font-weight: 600;
     letter-spacing: 0.8px;
-    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+
   }
   
   #header .logo a {
     color: #222222;
+   
   }
   
   #header .logo a span {
-    color: #52a22a;
+    /* color: #2596be; */
+    color: #2596be;
   }
   
   #header .logo img {
-    max-height: 40px;
+    /* max-height: 40px; */
+    height:90px;
+    width: 80px;
+    /* margin-bottom: 5px; */
+  }
+  #header .logo1 img {
+    /* max-height: 40px; */
+    height:40px;
+    width: 250px;
+    /* margin-bottom: 5px; */
   }
   
   .scrolled-offset {
@@ -102,7 +115,7 @@
     height: 2px;
     bottom: -6px;
     left: 0;
-    background-color: #52a22a;
+    background-color: #2596be;
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -119,7 +132,7 @@
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #52a22a;
+    color: #2596be;
   }
   
   .navbar .dropdown ul {
@@ -153,7 +166,7 @@
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover>a {
-    color: #52a22a;
+    color: #2596be;
   }
   
   .navbar .dropdown:hover>ul {
@@ -262,7 +275,7 @@
   .navbar-mobile a:hover,
   .navbar-mobile .active,
   .navbar-mobile li:hover>a {
-    color: #52a22a;
+    color: #2596be;
   }
   
   .navbar-mobile .getstarted,
@@ -297,7 +310,7 @@
   .navbar-mobile .dropdown ul a:hover,
   .navbar-mobile .dropdown ul .active:hover,
   .navbar-mobile .dropdown ul li:hover>a {
-    color: #52a22a;
+    color: #2596be;
   }
   
   .navbar-mobile .dropdown>.dropdown-active {

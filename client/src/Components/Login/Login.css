@@ -99,7 +99,7 @@ p.account, p.account a {
 }
 
 p.account a{
-    color:#0568C1;
+    color:#2596be;
 }
 p.account a:hover {
     text-decoration: underline;
@@ -142,13 +142,13 @@ p.account a:hover {
 }
 .w3l-hotair-form input:focus {
     background:transparent;
-    border: 1px solid #0568C1;
+    border: 1px solid #2596be;
 }
 .w3l-hotair-form button {
     font-size: 18px;
     color: #fff;
     width: 100%;
-    background: #0568C1;
+    background: #2596be;
     border: none;
     padding: 14px 15px;
     font-weight: 700;
@@ -160,7 +160,7 @@ p.account a:hover {
 }
 
 .w3l-hotair-form button:hover {
-    background: #fdc500;
+    background: #70c5e4;
 }
 
 .w3l-hotair-form .social-icons ul li {
@@ -232,7 +232,7 @@ p.copy-footer-29 a {
 }
 
 p.copy-footer-29 a:hover {
-    color:#fdc500;
+    color:#70c5e4;
     transition: 0.5s ease;
     -webkit-transition: 0.5s ease;
     -o-transition: 0.5s ease;
