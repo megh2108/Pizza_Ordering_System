@@ -21,11 +21,11 @@ function Login() {
 
                                 <p className="account">Don't have an account? <NavLink to="/Signup">Register</NavLink></p>
                             </div>
-                            <div className="w3l_form align-self">
-                                <div className="left_grid_info">
-                                    <img src="" alt="" className="img-fluid" />
-                                </div>
-                            </div>
+                            {/* <div className="w3l_form align-self">
+                                <div className="left_grid_info"> */}
+                                    <img src="assets/img/logo/1.png" alt="" className="img-fluid" />
+                                {/* </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

@@ -60,11 +60,11 @@ function Signup() {
 
                     <div className="workinghny-form-grid">
                         <div className="main-hotair">
-                            <div className="w3l_form align-self">
-                                <div className="left_grid_info">
-                                    <img src="" alt="" className="img-fluid" />
-                                </div>
-                            </div>
+                            {/* <div className="w3l_form align-self">
+                                <div className="left_grid_info"> */}
+                                    <img src="assets/img/logo/2.png" alt="" className="img-fluid" />
+                                {/* </div>
+                            </div> */}
                             <div className="content-wthree">
                                 <h2>Sign Up</h2>
                                 <form method="POST">

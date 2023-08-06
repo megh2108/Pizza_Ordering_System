@@ -36,6 +36,10 @@ input {
     -ms-border-radius: 36px;
 }
 
+.img-fluid{
+    height:500px;
+    width:500px;
+}
 
 
 .w3l_form {
@@ -99,7 +103,7 @@ p.account, p.account a {
 }
 
 p.account a{
-    color:#0568C1;
+    color:#2596be;
 }
 p.account a:hover {
     text-decoration: underline;
@@ -142,13 +146,13 @@ p.account a:hover {
 }
 .w3l-hotair-form input:focus {
     background:transparent;
-    border: 1px solid #0568C1;
+    border: 1px solid #2596be;
 }
 .w3l-hotair-form button {
     font-size: 18px;
     color: #fff;
     width: 100%;
-    background: #0568C1;
+    background: #2596be;
     border: none;
     padding: 14px 15px;
     font-weight: 700;
@@ -160,7 +164,7 @@ p.account a:hover {
 }
 
 .w3l-hotair-form button:hover {
-    background: #fdc500;
+    background: #65d2f9;
 }
 
 .w3l-hotair-form .social-icons ul li {
@@ -197,13 +201,13 @@ p.account a:hover {
 }
 
 .w3l-hotair-form .social-icons ul li a.twitter span {
-    color: #1da1f2;
+    color: #2596be;
     font-size: 18px;
     width: 36px;
     height: 36px;
     border-radius: 50%;
     margin-right: 6px;
-    border: 2px solid #1da1f2;
+    border: 2px solid #2596be;
     line-height:32px;
 }
 
@@ -232,7 +236,7 @@ p.copy-footer-29 a {
 }
 
 p.copy-footer-29 a:hover {
-    color:#fdc500;
+    color:#65d2f9;
     transition: 0.5s ease;
     -webkit-transition: 0.5s ease;
     -o-transition: 0.5s ease;
