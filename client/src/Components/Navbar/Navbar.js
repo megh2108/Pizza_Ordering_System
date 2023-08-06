@@ -151,6 +151,7 @@ function Navbar() {
                             <li><NavLink to="/About">About</NavLink></li>
                             <li><NavLink to="/Menu">Menu</NavLink></li>
                             <li><NavLink to="/Contact">Contact</NavLink></li>
+                            <li><NavLink to="/Cart">Cart</NavLink></li>
                             <li><NavLink to="/Signup">Signup</NavLink></li>
                             <li><NavLink to="/Login">Login</NavLink></li>
 

@@ -134,7 +134,7 @@ router.get('/pizza',async (req, res) => {
   })
 
 
-  router.get('/about', Authenticate, (req, res) => {
+  router.get('/carts', Authenticate, (req, res) => {
     console.log(`Hello my About`);
     res.send(req.rootUser);
   });
