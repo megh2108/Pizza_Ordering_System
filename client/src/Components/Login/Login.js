@@ -27,9 +27,16 @@ function Login() {
         window.alert("Invalid Login");
         console.log("Invalid Login");
       } else {
-        window.alert("Successfully Login");
-        console.log("Successfully Login");
-        navigate("/Home");
+        if (res.status === 200){
+          window.alert("Successfully Login");
+          navigate("/About");
+        }
+        else{
+
+          window.alert("Successfully Login");
+          console.log("Successfully Login");
+          navigate("/Home");
+        }
       }
     }
     return (

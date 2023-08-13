@@ -8,6 +8,8 @@ const Authenticate = require("../middleware/Authenticate");
 require('../db/conn');
 const User = require('../model/userSchema');
 const Pizza = require('../model/pizzaSchema');
+const Admin = require('../model/addminSchema');
+
 
 router.get('/',(req,res) =>{
     res.send(`Hello world from server`);
@@ -73,9 +75,19 @@ router.post('/login', async (req, res) => {
         }
 
         console.log(email);
+        console.log(password);
+
+        // if(email == "user@gmail.com"){
+
+        // }
 
         const userLogin = await User.findOne({ email: email });
-        console.log(userLogin);
+        const adminLogin = await Admin.findOne({ email: email });
+        // console.log(userLogin);
+        // console.log(adminLogin);
+        // console.log(userLogin.email);
+        console.log(adminLogin.email);
+        console.log(adminLogin.password);
 
         // if(userLogin === null){
         //     res.status(400).json({ error: "Invalid Credentials." });
@@ -103,10 +115,40 @@ router.post('/login', async (req, res) => {
                     expires: new Date(Date.now() + 25892000000),    
                     httpOnly: true  
                 });
+
+             
                 res.json({ message: "user login successfully" });
             }
 
-        } else {
+         
+        }else if (adminLogin != null) {
+            
+            // const isMatch = await bcrypt.compare(password,adminLogin.password);
+            
+            if(password != (adminLogin.password)){
+                
+                res.status(400).json({ error: "Invalid Credentials." });
+            }else{
+                
+                const token = await adminLogin.generateAuthToken();
+                console.log(token)
+        
+                // for cookies
+                // this cookie will save on your browser which you are using for login 
+                // name of cookies is left side and right side is actual token
+                // pass third parameter fr=or the expire token
+                res.cookie("jwtoken",token,{ 
+                    expires: new Date(Date.now() + 25892000000),    
+                    httpOnly: true  
+                });
+
+                // if(userLogin.email == 'admin@gmail.com'){
+                //     res.status(200).json({ message: "Admin Login Suucessfully...   " });
+                // }
+                res.status(200).json({ message: "Admin login successfully" });
+            }
+
+        }else {
 
             res.status(400).json({ error: "Invalid Credentials...   " });
 
@@ -118,7 +160,6 @@ router.post('/login', async (req, res) => {
 
     }
 })
-
 
 router.get('/pizza',async (req, res) => {
     // Use the Pizza model to find all documents in the collection
